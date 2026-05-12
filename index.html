@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CORE SOX Advisory | Technical SOX Advisory</title>
   <meta name="description" content="CORE SOX Advisory provides technical SOX advisory, IPO readiness, internal controls transformation, and interim SOX leadership for public and pre-IPO companies." />
+
   <style>
     :root {
       --navy: #0D1B2A;
@@ -317,6 +318,75 @@
       color: var(--slate);
     }
 
+    .about-visual {
+      background: var(--white);
+      padding: 0;
+    }
+
+    .about-visual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 520px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .about-copy {
+      background: var(--navy);
+      color: var(--white);
+      padding: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-copy h2 {
+      font-size: 2.4rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-copy p {
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+
+    .about-icons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .about-icon span {
+      color: var(--gold);
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+
+    .about-icon small {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.3;
+      display: block;
+    }
+
+    .about-image {
+      background: linear-gradient(135deg, #D6D9DE, #F7F8FA);
+      min-height: 520px;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .services {
       background: var(--light);
     }
@@ -381,69 +451,6 @@
     .card p {
       color: var(--slate);
       font-size: 0.94rem;
-    }
-
-    .about-wrap {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .about-panel {
-      background: var(--navy);
-      color: var(--white);
-      padding: 2.5rem;
-      min-height: 420px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .about-panel::after {
-      content: 'C';
-      position: absolute;
-      right: -40px;
-      bottom: -75px;
-      font-family: Georgia, serif;
-      font-size: 22rem;
-      color: rgba(255,255,255,0.04);
-      line-height: 1;
-    }
-
-    .about-panel h2 {
-      font-size: 2.4rem;
-      margin-bottom: 1rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .about-panel p {
-      color: rgba(255,255,255,0.78);
-      margin-bottom: 1.4rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-
-    .stat {
-      border-left: 2px solid var(--gold);
-      padding-left: 1rem;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.35rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .stat span {
-      color: var(--slate);
-      font-size: 0.92rem;
     }
 
     .dark-band {
@@ -527,6 +534,38 @@
       margin-top: 0.8rem;
       font-size: 1.35rem;
       line-height: 1.15;
+    }
+
+    .insight p {
+      margin-top: 1rem;
+      color: var(--slate);
+      font-size: 0.95rem;
+    }
+
+    .insight-link {
+      display: inline-block;
+      margin-top: 1.2rem;
+      color: var(--gold-dark);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+
+    .job-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 2rem;
+    }
+
+    .job-card h3 {
+      color: var(--navy);
+      font-size: 1.7rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .job-card p {
+      color: var(--slate);
     }
 
     .cta {
@@ -646,12 +685,13 @@
 
     @media (max-width: 980px) {
       nav ul { display: none; }
-      .hero-inner, .about-wrap, .contact-grid, .footer-inner { grid-template-columns: 1fr; }
+      .hero-inner, .contact-grid, .footer-inner, .about-visual-grid { grid-template-columns: 1fr; }
       .grid-4 { grid-template-columns: repeat(2, 1fr); }
       .method-grid, .insights-grid { grid-template-columns: 1fr; }
       .section-head { display: block; }
       .section-head p { margin-top: 1rem; }
       .legal { text-align: left; }
+      .about-icons { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 620px) {
@@ -662,10 +702,12 @@
       .hero { min-height: auto; }
       .hero-inner { padding: 4rem 1.2rem; }
       .hero-card { padding: 1.4rem; }
-      .grid-4, .stats { grid-template-columns: 1fr; }
+      .grid-4 { grid-template-columns: 1fr; }
       section { padding: 4rem 1.2rem; }
       .nav { padding: 0.95rem 1rem; }
       .nav .btn { display: none; }
+      .about-copy { padding: 3rem 1.4rem; }
+      .about-icons { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -726,6 +768,28 @@
       </div>
     </section>
 
+    <section id="about" class="about-visual">
+      <div class="about-visual-grid">
+        <div class="about-copy">
+          <div class="eyebrow">About CORE SOX Advisory</div>
+          <h2>Specialized SOX Advisory for Complex Organizations.</h2>
+          <p>CORE SOX Advisory is a boutique consulting firm specializing exclusively in SOX compliance, internal controls, and governance transformation.</p>
+          <p>We partner with executive teams to build efficient, risk-focused control environments that strengthen financial reporting and support business performance.</p>
+
+          <div class="about-icons">
+            <div class="about-icon"><span>◎</span><small>Executive-Level Experience</small></div>
+            <div class="about-icon"><span>◈</span><small>Boutique Agility</small></div>
+            <div class="about-icon"><span>✓</span><small>Risk-Focused Approach</small></div>
+            <div class="about-icon"><span>▣</span><small>Practical Solutions</small></div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <img src="/assets/Boardroom photo1.jpg" alt="Executive boardroom" />
+        </div>
+      </div>
+    </section>
+
     <section id="services" class="services">
       <div class="section-inner">
         <div class="section-head">
@@ -734,70 +798,14 @@
         </div>
 
         <div class="grid-4">
-          <article class="card">
-            <div class="icon">▣</div>
-            <h3>SOX Transformation</h3>
-            <p>Modernize SOX programs for efficiency, scalability, governance, and long-term value.</p>
-          </article>
-          <article class="card">
-            <div class="icon">✓</div>
-            <h3>SOX 404 Compliance</h3>
-            <p>Support end-to-end SOX design, documentation, testing strategy, and program execution.</p>
-          </article>
-          <article class="card">
-            <div class="icon">▲</div>
-            <h3>IPO Readiness</h3>
-            <p>Prepare control environments for successful public company readiness and SOX 404 adoption.</p>
-          </article>
-          <article class="card">
-            <div class="icon">◈</div>
-            <h3>Interim Leadership</h3>
-            <p>Provide experienced SOX leadership when organizations need senior-level support on-site or remote.</p>
-          </article>
-          <article class="card">
-            <div class="icon">◇</div>
-            <h3>Control Optimization</h3>
-            <p>Rationalize duplicate, low-value, or over-engineered controls to improve focus and reduce fatigue.</p>
-          </article>
-          <article class="card">
-            <div class="icon">!</div>
-            <h3>Deficiency Remediation</h3>
-            <p>Assist with root cause analysis, remediation plans, action tracking, and executive-level reporting.</p>
-          </article>
-          <article class="card">
-            <div class="icon">⌁</div>
-            <h3>Automation & Analytics</h3>
-            <p>Identify opportunities to use analytics, monitoring, and automation to modernize controls work.</p>
-          </article>
-          <article class="card">
-            <div class="icon">◉</div>
-            <h3>Governance Reporting</h3>
-            <p>Develop clear, practical reporting for management, executives, audit committees, and key stakeholders.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="section-inner about-wrap">
-        <div class="about-panel">
-          <div class="eyebrow">Why CORE SOX Advisory</div>
-          <h2>Specialized support for complex SOX environments.</h2>
-          <p>CORE SOX Advisory provides focused SOX, internal controls, and governance advisory for organizations that require senior-level insight, practical execution, and scalable compliance support.</p>
-          <p>Our work is designed to help organizations strengthen controls, improve governance visibility, reduce unnecessary complexity, and prepare for evolving public company expectations.</p>
-        </div>
-
-        <div>
-          <div class="section-head" style="margin-bottom:1.6rem; display:block;">
-            <h2>Firm-first advisory designed for CFOs, Controllers, and Internal Audit leaders.</h2>
-            <p style="margin-top:1rem;">This section can later be expanded with founder information, client experience, case studies, testimonials, or additional firm credentials.</p>
-          </div>
-          <div class="stats">
-            <div class="stat"><strong>Focused</strong><span>Specialized SOX and internal controls advisory only</span></div>
-            <div class="stat"><strong>Practical</strong><span>Actionable recommendations aligned to business realities</span></div>
-            <div class="stat"><strong>Scalable</strong><span>Support for public, pre-IPO, and growing organizations</span></div>
-            <div class="stat"><strong>Modern</strong><span>Controls transformation, analytics, and automation awareness</span></div>
-          </div>
+          <article class="card"><div class="icon">▣</div><h3>SOX Transformation</h3><p>Modernize SOX programs for efficiency, scalability, governance, and long-term value.</p></article>
+          <article class="card"><div class="icon">✓</div><h3>SOX 404 Compliance</h3><p>Support end-to-end SOX design, documentation, testing strategy, and program execution.</p></article>
+          <article class="card"><div class="icon">▲</div><h3>IPO Readiness</h3><p>Prepare control environments for successful public company readiness and SOX 404 adoption.</p></article>
+          <article class="card"><div class="icon">◈</div><h3>Interim Leadership</h3><p>Provide experienced SOX leadership when organizations need senior-level support on-site or remote.</p></article>
+          <article class="card"><div class="icon">◇</div><h3>Control Optimization</h3><p>Rationalize duplicate, low-value, or over-engineered controls to improve focus and reduce fatigue.</p></article>
+          <article class="card"><div class="icon">!</div><h3>Deficiency Remediation</h3><p>Assist with root cause analysis, remediation plans, action tracking, and executive-level reporting.</p></article>
+          <article class="card"><div class="icon">⌁</div><h3>Automation & Analytics</h3><p>Identify opportunities to use analytics, monitoring, and automation to modernize controls work.</p></article>
+          <article class="card"><div class="icon">◉</div><h3>Governance Reporting</h3><p>Develop clear, practical reporting for management, executives, audit committees, and key stakeholders.</p></article>
         </div>
       </div>
     </section>
@@ -810,21 +818,9 @@
         </div>
 
         <div class="method-grid">
-          <div class="method">
-            <div class="num">01 / ASSESS</div>
-            <h3>Understand the Current State</h3>
-            <p>Review program maturity, key processes, control design, documentation, stakeholder needs, and known pain points.</p>
-          </div>
-          <div class="method">
-            <div class="num">02 / OPTIMIZE</div>
-            <h3>Prioritize What Matters</h3>
-            <p>Identify control rationalization opportunities, remediation needs, governance improvements, and scalability gaps.</p>
-          </div>
-          <div class="method">
-            <div class="num">03 / EXECUTE</div>
-            <h3>Drive Practical Results</h3>
-            <p>Support implementation through PMO discipline, stakeholder alignment, executive reporting, and sustainable action plans.</p>
-          </div>
+          <div class="method"><div class="num">01 / ASSESS</div><h3>Understand the Current State</h3><p>Review program maturity, key processes, control design, documentation, stakeholder needs, and known pain points.</p></div>
+          <div class="method"><div class="num">02 / OPTIMIZE</div><h3>Prioritize What Matters</h3><p>Identify control rationalization opportunities, remediation needs, governance improvements, and scalability gaps.</p></div>
+          <div class="method"><div class="num">03 / EXECUTE</div><h3>Drive Practical Results</h3><p>Support implementation through PMO discipline, stakeholder alignment, executive reporting, and sustainable action plans.</p></div>
         </div>
       </div>
     </section>
@@ -858,14 +854,20 @@
           <article class="insight">
             <small>SOX Transformation</small>
             <h3>Why mature SOX programs often become over-engineered.</h3>
+            <p>How organizations can simplify controls environments while improving governance visibility and sustainability.</p>
+            <a class="insight-link" href="/assets/CORE_SOX_Insight_Over_Engineered_SOX.pdf" target="_blank" rel="noopener">Download Insight →</a>
           </article>
+
           <article class="insight">
             <small>IPO Readiness</small>
             <h3>What pre-IPO companies should solve before year one SOX pressure.</h3>
+            <p>Coming soon: an executive insight on governance readiness, control design, and scalable compliance foundations.</p>
           </article>
+
           <article class="insight">
             <small>Modern Controls</small>
             <h3>How analytics and AI can strengthen control monitoring.</h3>
+            <p>Coming soon: a practical view of analytics-enabled control monitoring and SOX modernization.</p>
           </article>
         </div>
       </div>
@@ -877,9 +879,9 @@
           <h2>Job Opportunities</h2>
           <p>As CORE SOX Advisory grows, future opportunities may be posted here for SOX, internal controls, governance, and advisory professionals.</p>
         </div>
-        <div class="contact-card" style="background:#FFFFFF; color:#0D1B2A; border:1px solid #D6D9DE;">
-          <h3 style="color:#0D1B2A;">No Current Openings</h3>
-          <p style="color:#495567;">There are no current openings at the moment. Please check back for future opportunities.</p>
+        <div class="job-card">
+          <h3>No Current Openings</h3>
+          <p>There are no current openings at the moment. Please check back for future opportunities.</p>
         </div>
       </div>
     </section>
@@ -901,11 +903,11 @@
           <ul>
             <li><strong>Website:</strong> www.coresoxadvisory.com</li>
             <li><strong>LinkedIn:</strong> linkedin.com/company/core-sox-advisory</li>
-            <li><strong>Location:</strong> Serving clients globally</li>
+            <li><strong>Location:</strong> Based out of New York, NY & Miami, FL. Serving clients globally</li>
           </ul>
         </div>
 
-   <form action="https://formspree.io/f/mwvyyyak" method="POST">
+        <form action="https://formspree.io/f/mwvyyyak" method="POST">
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
           <input type="text" name="company" placeholder="Company" />
@@ -929,7 +931,7 @@
     <div class="footer-inner">
       <div>
         <div class="footer-tag">Governance. Controls. Confidence.</div>
-        <div class="footer-gold">Technical SOX Advisory for Public & Pre-IPO Companies.</div>
+        <div class="footer-gold">Technical SOX Advisory for Public & Pre-IPO Companies</div>
       </div>
       <div class="legal">
         <strong>CORE SOX Advisory</strong><br />
